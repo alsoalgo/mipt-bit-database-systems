@@ -1,0 +1,1 @@
+db.mall.find({ Age: { $gte: "25" } })

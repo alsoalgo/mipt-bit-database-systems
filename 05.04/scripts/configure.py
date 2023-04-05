@@ -4,7 +4,7 @@ from constants import CONNECTION_URL, PATH, USERNAME, PASSWORD
 
 def get_db():
     client = MongoClient(CONNECTION_URL % (USERNAME, PASSWORD))
-    db = client['homework_05_03']
+    db = client['homework_05_04']
     return db
 
 def load_dataset():

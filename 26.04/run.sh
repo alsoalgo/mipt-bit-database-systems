@@ -67,7 +67,7 @@ cd ..
 echo "${INFO} Running docker container with id: $(docker run -d --network=redis-network --name redis-app redis-app)"
 
 echo "${INFO} Data began to be generated and inserted into the cluster"
-echo "${INFO} Container logs will be shown below in ~2 minutes:"
+echo "${INFO} Container logs will be shown below in ~3-4 minutes:"
 echo "${INFO} Loading..."
 spin='-\|/'
 

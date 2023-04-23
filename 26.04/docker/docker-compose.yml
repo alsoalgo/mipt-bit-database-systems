@@ -1,0 +1,51 @@
+version: "3"
+services:
+  redis1:
+    container_name: redis1
+    build:
+      context: .
+      dockerfile: Dockerfile.redis
+    ports:
+      - "7001:7001"
+    networks:
+      - redis-network
+    volumes:
+      - ../redis-cluster/master1.conf:/usr/local/etc/redis/master.conf
+      - ../redis-cluster/slave1.conf:/usr/local/etc/redis/slave.conf
+      - ../redis-cluster/data1:/data
+    command: ["redis-server", "/usr/local/etc/redis/master.conf"]
+
+  redis2:
+    container_name: redis2
+    build:
+      context: .
+      dockerfile: Dockerfile.redis
+    ports:
+      - "7002:7002"
+    networks:
+      - redis-network
+    volumes:
+      - ../redis-cluster/master2.conf:/usr/local/etc/redis/master.conf
+      - ../redis-cluster/slave2.conf:/usr/local/etc/redis/slave.conf
+      - ../redis-cluster/data2:/data
+    command: ["redis-server", "/usr/local/etc/redis/master.conf"]
+
+  redis3:
+    container_name: redis3
+    build:
+      context: .
+      dockerfile: Dockerfile.redis
+    ports:
+      - "7003:7003"
+    networks:
+      - redis-network
+    volumes:
+      - ../redis-cluster/master3.conf:/usr/local/etc/redis/master.conf
+      - ../redis-cluster/slave3.conf:/usr/local/etc/redis/slave.conf
+      - ../redis-cluster/data3:/data
+    command: ["redis-server", "/usr/local/etc/redis/master.conf"]
+
+networks:
+  redis-network:
+    name: redis-network
+    external: true

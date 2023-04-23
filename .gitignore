@@ -1,3 +1,7 @@
-.env/
-05.03/.env
+**/.env
+**/env
 **/__pycache__
+**/data
+**/data1
+**/data2
+**/data3

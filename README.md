@@ -1,4 +1,4 @@
-# bit-database-systems  
+# mipt-bit-database-systems  
 
 1) [Домашнее задание к 23.02](23.02.md).
 2) [Домашнее задание к 05.04](05.04/README.md).
